@@ -30,6 +30,11 @@ fun main() {
                 output = sevens
             }
         }
+
+        if (i%11==0) {
+            output = "Bong"
+        }
+
         println(output)
     }
 
