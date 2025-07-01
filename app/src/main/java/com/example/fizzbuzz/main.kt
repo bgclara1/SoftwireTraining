@@ -2,9 +2,10 @@ package com.example.fizzbuzz
 
 fun main() {
 
+    print("Enter max number: ")
+    val maxnum = readLine()!!
     val sevens = "Bang"
-  //  println("Hello world!")
-    for (i in 1..300) {
+    for (i in 1..maxnum.toInt()) {
         var output  = ""
         var fizz = false
         var buzz = false
