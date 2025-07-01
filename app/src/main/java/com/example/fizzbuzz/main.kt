@@ -50,11 +50,11 @@ fun main() {
         if (bong) {
             output = "Bong"
         }
-        if (fezz) {
+        if (fezz) {                 // prescribe fezz placement rather than looking for Bs
             if (fizz && buzz) {
                 output = "FizzFezzBuzz"
             } else if (buzz) {
-                output = "fezzbuzz"
+                output = "FezzBuzz"
             } else if (bong) {
                 output = "FezzBong"
             } else {
@@ -65,14 +65,13 @@ fun main() {
             output = i.toString()
         }
 
-        // if div by 17 and output is a multiple of 4 splice into groups of fours into array and reverse order in print otherwise leave alone
+        //
 
         if (i%17==0) {
             var numfactors = output.length
           //  var words = emptyArray<String>()
             if (numfactors%4==0) {
                 var words = output.chunked(4)
-               // output = (words.reversed()).joinToString()
                 words = (words.reversed())
                 output = ""
                 for(s in words){
