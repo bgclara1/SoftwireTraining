@@ -1,5 +1,5 @@
 package com.example.fizzbuzz
 
 fun main() {
-    print("Hello world!")
+    println("Hello world!")
 }
