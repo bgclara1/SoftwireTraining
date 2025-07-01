@@ -4,36 +4,66 @@ fun main() {
 
     val sevens = "Bang"
   //  println("Hello world!")
-    for (i in 1..100) {
+    for (i in 1..200) {
         var output  = ""
-        var normal = false
-        if (i%3==0 && i%5==0){
-            output = "FizzBuzz"
-        //    println("FizzBuzz")
-        } else if (i % 3 == 0) {
-            output = "Fizz"
-       //     println("Fizz")
-        } else if (i%5==0) {
-            output = "Buzz"
-         //   println("Buzz")
+        var fizz = false
+        var buzz = false
+        var bang = false
+        var fezz = false
+        var bong = false
+
+        if (i % 3 == 0) {
+            fizz = true
+
         }
-        else {
-            output = i.toString()
-            normal = true
-          //  println(i)
+        if (i%5==0) {
+            buzz = true
         }
 
         if (i%7==0) {
-            if (normal == false) {
-                output = "$output$sevens"
-            } else {
-                output = sevens
-            }
+            bang = true
         }
 
         if (i%11==0) {
+            bong = true
+        }
+
+        var thirteens = "Fezz"
+        if (i%13==0) {
+            fezz = true
+        }
+        output = ""
+
+        if (fizz) {
+            output = "Fizz"
+        }
+        if (buzz) {
+            output = "Buzz"
+        }
+        if (fizz && buzz) {
+            output = "FizzBuzz"
+        }
+        if (bang) {
+            output = "$output$sevens"
+        }
+        if (bong) {
             output = "Bong"
         }
+        if (fezz) {
+            if (fizz && buzz) {
+                output = "FizzFezzBuzz"
+            } else if (buzz) {
+                output = "fezzbuzz"
+            } else if (bong) {
+                output = "FezzBong"
+            } else {
+                output = "$output$thirteens"
+            }
+        }
+        if (output==""){
+            output = i.toString()
+        }
+
 
         println(output)
     }
